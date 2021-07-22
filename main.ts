@@ -488,6 +488,7 @@ namespace GPLCS {
     //%blockId=GPLCS_readGesture
     //%block="GPLCS read gesture"
     //%group=Gesture
+    //% weight=68 blockGap=8
     export function gesture() {
         let fifo_level = 0;
         let bytes_read = 0;
@@ -583,6 +584,7 @@ namespace GPLCS {
     //%block="GPLCS on gesture %u"
     //%u.defl=1
     //%group=Gesture
+    //% weight=69 blockGap=8
     export function onGesture(u: gestures, handler: () => void) {
         if (u == gestures.LEFT) {
             control.onEvent(5, 8, function () {
@@ -620,6 +622,7 @@ namespace GPLCS {
 
     //%blockId="getGestureID"
     //%block="GPLCS get gesture ID"
+    //% weight=67 blockGap=8
     export function getGestureID(): number {
         let dir_id: number = 0
         if (motion_global == DIR_UP) {
@@ -858,6 +861,7 @@ namespace GPLCS {
     //%u.defl=1
     //%interrupts.defl=false
     //%group=Mode
+    //% weight=99 blockGap=8
     export function enable_mode(u: GPLCS_mode): void {
         if (u == GPLCS_mode.LIGHT_MODE) {
             disableProximitySensor()
@@ -957,6 +961,7 @@ namespace GPLCS {
     //%blockId=GPLCS_getProximity
     //%block="GPLCS proximity"
     //%group=Proximity
+    //% weight=79 blockGap=8
     export function proximity() {
         let val: number = 0;
 
@@ -1040,6 +1045,7 @@ namespace GPLCS {
     //%blockId=GPLCS_getAmbientLight
     //%block="GPLCS illuminance %u"
     //%group=Light
+    //% weight=86 blockGap=8
     export function ambientLight(u: light_unit): number {
         let val_byte: number;
         let val: number = 0;
@@ -1063,6 +1069,7 @@ namespace GPLCS {
     //%blockId=GPLCS_getRedLight
     //%block="GPLCS red light"
     //%group=Light
+    //% weight=87 blockGap=8
     export function redLight(): number {
         let val_byte: number;
         let val: number = 0;
@@ -1082,6 +1089,7 @@ namespace GPLCS {
     //%blockId=GPLCS_getGreenLight
     //%block="GPLCS green light"
     //%group=Light
+    //% weight=88 blockGap=8
     export function greenLight(): number {
         let val_byte: number;
         let val: number = 0;
@@ -1104,6 +1112,7 @@ namespace GPLCS {
     //%blockId=GPLCS_getBlueLight
     //%block="GPLCS blue light"
     //%group=Light
+    //% weight=89 blockGap=8
     export function blueLight(): number {
         let val_byte: number;
         let val: number = 0;
