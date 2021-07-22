@@ -491,7 +491,7 @@ namespace GPLCS {
     //%blockId=GPLCS_readGesture
     //%block="GPLCS read gesture"
     //%group=Gesture
-    //% weight=68 blockGap=8
+    //% weight=69 blockGap=8
     export function gesture() {
         let fifo_level = 0;
         let bytes_read = 0;
@@ -590,7 +590,7 @@ namespace GPLCS {
     //%block="GPLCS on gesture %u"
     //%u.defl=1
     //%group=Gesture
-    //% weight=69 blockGap=8
+    //% weight=68 blockGap=8
     export function onGesture(u: gestures, handler: () => void) {
         if (u == gestures.LEFT) {
             control.onEvent(5, 8, function () {
