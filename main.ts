@@ -485,6 +485,9 @@ namespace GPLCS {
         }
     }
 
+    /**
+     * check the gesture
+     */
     //%blockId=GPLCS_readGesture
     //%block="GPLCS read gesture"
     //%group=Gesture
@@ -581,6 +584,9 @@ namespace GPLCS {
 
     }
 
+    /**
+     * run the code when detect the gesture
+     */
     //%block="GPLCS on gesture %u"
     //%u.defl=1
     //%group=Gesture
@@ -619,7 +625,9 @@ namespace GPLCS {
         }
     }
 
-
+    /**
+     * output the gesture ID, 1 = up, 2 = right, 3 = down, 4 = left, 5 = near, 6 = away.
+     */
     //%blockId="getGestureID"
     //%block="GPLCS get gesture ID"
     //% weight=67 blockGap=8
@@ -856,6 +864,9 @@ namespace GPLCS {
         return false;
     }
 
+    /**
+     * config the GPLCS working mode, it will disable the other functions
+     */
     //%blockId=GPLCS_enabler
     //%block="GPLCS enable %u"
     //%u.defl=1
@@ -958,6 +969,9 @@ namespace GPLCS {
         wireWriteDataByte(0x8F, val)
     }
 
+    /**
+     * output the index of proximity, smaller value mean far away from the sensor. please keep in mind that it is not a distance reading!
+     */
     //%blockId=GPLCS_getProximity
     //%block="GPLCS proximity"
     //%group=Proximity
@@ -1042,6 +1056,9 @@ namespace GPLCS {
         throwaway = wireReadDataByte(0xE7)
     }
 
+    /**
+     * output the light intensity of choseed unit, LUX is the SI derived unit of illuminance,FC mean foot-candle
+     */
     //%blockId=GPLCS_getAmbientLight
     //%block="GPLCS illuminance %u"
     //%group=Light
@@ -1066,10 +1083,13 @@ namespace GPLCS {
         return val
     }
 
+    /**
+     * Red light intensity
+     */
     //%blockId=GPLCS_getRedLight
     //%block="GPLCS red light"
     //%group=Light
-    //% weight=87 blockGap=8
+    //% weight=89 blockGap=8
     export function redLight(): number {
         let val_byte: number;
         let val: number = 0;
@@ -1086,6 +1106,9 @@ namespace GPLCS {
         return val;
     }
 
+    /**
+     * green light intensity
+     */
     //%blockId=GPLCS_getGreenLight
     //%block="GPLCS green light"
     //%group=Light
@@ -1109,10 +1132,13 @@ namespace GPLCS {
         return val;
     }
 
+    /**
+     * blue light intensity
+     */
     //%blockId=GPLCS_getBlueLight
     //%block="GPLCS blue light"
     //%group=Light
-    //% weight=89 blockGap=8
+    //% weight=87 blockGap=8
     export function blueLight(): number {
         let val_byte: number;
         let val: number = 0;
