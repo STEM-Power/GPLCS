@@ -26,7 +26,7 @@ namespace GPLCS {
         ALL_STATE1
     };
 
-    export enum GPLC01_mode {
+    export enum GPLCS_mode {
         //% block="LIGHT MODE"
         LIGHT_MODE,
 
@@ -89,8 +89,8 @@ namespace GPLCS {
         FC = 2
     }
 
-    //%blockId=GPLC01_begin
-    //%block="GPLC01 begin"
+    //%blockId=GPLCS_begin
+    //%block="GPLCS begin"
     //%advanced=true
     //%group=Optional
     function begin(): void {
@@ -858,16 +858,16 @@ namespace GPLCS {
     //%u.defl=1
     //%interrupts.defl=false
     //%group=Mode
-    export function enable_mode(u: GPLC01_mode): void {
-        if (u == GPLC01_mode.LIGHT_MODE) {
+    export function enable_mode(u: GPLCS_mode): void {
+        if (u == GPLCS_mode.LIGHT_MODE) {
             disableProximitySensor()
             disableGestureSensor()
             enableLightSensor()
-        } else if (u == GPLC01_mode.PROXIMITY_MODE) {
+        } else if (u == GPLCS_mode.PROXIMITY_MODE) {
             disableLightSensor()
             disableGestureSensor()
             enableProximitySensor()
-        } else if (u == GPLC01_mode.GESTURE_MODE) {
+        } else if (u == GPLCS_mode.GESTURE_MODE) {
             disableLightSensor()
             disableProximitySensor()
             enableGestureSensor()
