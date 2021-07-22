@@ -191,8 +191,8 @@ namespace GPLCS {
 
     }
 
-    //%blockId=GPLC01_getMode
-    //%block="GPLC01 get mode"
+    //%blockId=GPLCS_getMode
+    //%block="GPLCS get mode"
     //%advanced=true
     //%group=Optional
     function getMode(): number {
@@ -205,8 +205,8 @@ namespace GPLCS {
         return enable_value;
     }
 
-    //%blockId=GPLC01_setMode
-    //%block="GPLC01 set mode %mode %enable"
+    //%blockId=GPLCS_setMode
+    //%block="GPLCS set mode %mode %enable"
     //%advanced=true
     //%group=Optional
     function setMode(mode: NumberFormat.UInt8BE, enable: NumberFormat.UInt8BE): boolean {
@@ -247,15 +247,15 @@ namespace GPLCS {
     }
 
 
-    //%blockId=GPLC01_enablePower
-    //%block="GPLC01 enable power"
+    //%blockId=GPLCS_enablePower
+    //%block="GPLCS enable power"
     //%group=Optional
     function enablePower() {
         setMode(0, 1)
     }
 
-    //%blockId=GPLC01_disablePower
-    //%block="GPLC01 disable power"
+    //%blockId=GPLCS_disablePower
+    //%block="GPLCS disable power"
     //%group=Optional
     function disbalePower() {
         setMode(0, 0)
@@ -305,8 +305,8 @@ namespace GPLCS {
 
     }
 
-    //%blockId=GPLC01_getLEDDRive
-    //%block="GPLC01 get LED drive"
+    //%blockId=GPLCS_getLEDDRive
+    //%block="GPLCS get LED drive"
     //%advanced=true
     //%group=Optional
     function getLEDDrive() {
@@ -322,8 +322,8 @@ namespace GPLCS {
         return val;
     }
 
-    //%blockId=GPLC01_setLEDDRive
-    //%block="GPLC01 set LED drive %drive"
+    //%blockId=GPLCS_setLEDDRive
+    //%block="GPLCS set LED drive %drive"
     //%advanced=true
     //%group=Optional
     function setLEDDrive(drive: NumberFormat.UInt8BE): void {
@@ -345,8 +345,8 @@ namespace GPLCS {
 
     }
 
-    //%blockId=GPLC01_getGestureLEDDrive
-    //%block="GPLC01 get gesture LED drive"
+    //%blockId=GPLCS_getGestureLEDDrive
+    //%block="GPLCS get gesture LED drive"
     //%advanced=true
     //%group=Gesture
     function getGestureLEDDrive() {
@@ -362,8 +362,8 @@ namespace GPLCS {
         return val;
     }
 
-    //%blockId=GPLC01_setGestureLEDDrive
-    //%block="GPLC01 set gesture LED drive %drive"
+    //%blockId=GPLCS_setGestureLEDDrive
+    //%block="GPLCS set gesture LED drive %drive"
     //%group=Gesture
     //%advanced=true
     function setGestureLEDDrive(drive: number) {
@@ -384,8 +384,8 @@ namespace GPLCS {
             ;
     }
 
-    //%blockId=GPLC01_getGestureGain
-    //%block="GPLC01 get gesture gain"
+    //%blockId=GPLCS_getGestureGain
+    //%block="GPLCS get gesture gain"
     //%advanced=true
     //%group=Gesture
     function getGestureGain() {
@@ -401,8 +401,8 @@ namespace GPLCS {
         return val;
     }
 
-    //%blockId=GPLC01_setGestureGain
-    //%block="GPLC01 set gesture gain %gain"
+    //%blockId=GPLCS_setGestureGain
+    //%block="GPLCS set gesture gain %gain"
     //%advanced=true
     //%group=Gesture
     function setGestureGain(gain: number) {
@@ -424,8 +424,8 @@ namespace GPLCS {
 
     }
 
-    //%blockId=GPLC01_getGestureIntEnable
-    //%block="GPLC01 get gesture int enable"
+    //%blockId=GPLCS_getGestureIntEnable
+    //%block="GPLCS get gesture int enable"
     //%advanced=true
     //%group=Gesture
     function getGestureIntEnable() {
@@ -441,8 +441,8 @@ namespace GPLCS {
         return val;
     }
 
-    //%blockId=GPLC01_setGestureIntEnable
-    //%block="GPLC01 set gesture int enable %enable"
+    //%blockId=GPLCS_setGestureIntEnable
+    //%block="GPLCS set gesture int enable %enable"
     //%group=Gesture
     //%advanced=true
     function setGestureIntEnable(enable: number): void {
@@ -463,8 +463,8 @@ namespace GPLCS {
 
     }
 
-    //%blockId=GPLC01_isGestureAvailable
-    //%block="GPLC01 is gesture available"
+    //%blockId=GPLCS_isGestureAvailable
+    //%block="GPLCS is gesture available"
     //%group=Gesture
     function isGestureAvailable() {
         let val = 0;
@@ -485,8 +485,8 @@ namespace GPLCS {
         }
     }
 
-    //%blockId=GPLC01_readGesture
-    //%block="GPLC01 read gesture"
+    //%blockId=GPLCS_readGesture
+    //%block="GPLCS read gesture"
     //%group=Gesture
     export function gesture() {
         let fifo_level = 0;
@@ -580,7 +580,7 @@ namespace GPLCS {
 
     }
 
-    //%block="GPLC01 on gesture %u"
+    //%block="GPLCS on gesture %u"
     //%u.defl=1
     //%group=Gesture
     export function onGesture(u: gestures, handler: () => void) {
@@ -619,7 +619,7 @@ namespace GPLCS {
 
 
     //%blockId="getGestureID"
-    //%block="GPLC01 get gesture ID"
+    //%block="GPLCS get gesture ID"
     export function getGestureID(): number {
         let dir_id: number = 0
         if (motion_global == DIR_UP) {
@@ -853,8 +853,8 @@ namespace GPLCS {
         return false;
     }
 
-    //%blockId=GPLC01_enabler
-    //%block="GPLC01 enable %u"
+    //%blockId=GPLCS_enabler
+    //%block="GPLCS enable %u"
     //%u.defl=1
     //%interrupts.defl=false
     //%group=Mode
@@ -915,8 +915,8 @@ namespace GPLCS {
 
     }
 
-    //%blockId=GPLC01_getProximityGain
-    //%block="GPLC01 get proximity gain"
+    //%blockId=GPLCS_getProximityGain
+    //%block="GPLCS get proximity gain"
     //%advanced=true
     //%group=Proximity
     function getProximityGain(): number {
@@ -932,8 +932,8 @@ namespace GPLCS {
         return val;
     }
 
-    //%blockId=GPLC01_setProximityGain
-    //%block="GPLC01 set proximity gain %drive"
+    //%blockId=GPLCS_setProximityGain
+    //%block="GPLCS set proximity gain %drive"
     //%advanced=true
     //%group=Proximity
     function setProximityGain(drive: NumberFormat.UInt8BE): void {
@@ -954,8 +954,8 @@ namespace GPLCS {
         wireWriteDataByte(0x8F, val)
     }
 
-    //%blockId=GPLC01_getProximity
-    //%block="GPLC01 proximity"
+    //%blockId=GPLCS_getProximity
+    //%block="GPLCS proximity"
     //%group=Proximity
     export function proximity() {
         let val: number = 0;
@@ -989,8 +989,8 @@ namespace GPLCS {
 
     }
 
-    //%blockId=GPLC01_getAmbientLightGain
-    //%block="GPLC01 get ambient light gain"
+    //%blockId=GPLCS_getAmbientLightGain
+    //%block="GPLCS get ambient light gain"
     //%group=Light
     //%advanced=true
     function getAmbientLightGain(): number {
@@ -1006,8 +1006,8 @@ namespace GPLCS {
         return val;
     }
 
-    //%blockId=GPLC01_setAmbientLightGain
-    //%block="GPLC01 set ambient light gain %drive"
+    //%blockId=GPLCS_setAmbientLightGain
+    //%block="GPLCS set ambient light gain %drive"
     //%group=Light
     //%advanced=true
     function setAmbientLightGain(drive: number): void {
@@ -1027,8 +1027,8 @@ namespace GPLCS {
         wireWriteDataByte(0x8F, val)
     }
 
-    //%blockId=GPLC01_clearAmbientLightInt
-    //%block="GPLC01 clear ambient light int"
+    //%blockId=GPLCS_clearAmbientLightInt
+    //%block="GPLCS clear ambient light int"
     //%group=Light
     //%advanced=true
     function clearAmbientLightInt(): void {
@@ -1037,8 +1037,8 @@ namespace GPLCS {
         throwaway = wireReadDataByte(0xE7)
     }
 
-    //%blockId=GPLC01_getAmbientLight
-    //%block="GPLC01 illuminance %u"
+    //%blockId=GPLCS_getAmbientLight
+    //%block="GPLCS illuminance %u"
     //%group=Light
     export function ambientLight(u: light_unit): number {
         let val_byte: number;
@@ -1060,8 +1060,8 @@ namespace GPLCS {
         return val
     }
 
-    //%blockId=GPLC01_getRedLight
-    //%block="GPLC01 red light"
+    //%blockId=GPLCS_getRedLight
+    //%block="GPLCS red light"
     //%group=Light
     export function redLight(): number {
         let val_byte: number;
@@ -1079,8 +1079,8 @@ namespace GPLCS {
         return val;
     }
 
-    //%blockId=GPLC01_getGreenLight
-    //%block="GPLC01 green light"
+    //%blockId=GPLCS_getGreenLight
+    //%block="GPLCS green light"
     //%group=Light
     export function greenLight(): number {
         let val_byte: number;
@@ -1101,8 +1101,8 @@ namespace GPLCS {
         return val;
     }
 
-    //%blockId=GPLC01_getBlueLight
-    //%block="GPLC01 blue light"
+    //%blockId=GPLCS_getBlueLight
+    //%block="GPLCS blue light"
     //%group=Light
     export function blueLight(): number {
         let val_byte: number;
