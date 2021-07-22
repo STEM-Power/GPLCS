@@ -1,0 +1,13 @@
+{
+  "GPLCS": "microbit makecode APDS9960 擴充\n\nGPLCS 模塊",
+  "GPLCS.ambientLight": "讀得所選擇的單位的光度, LUX 代表每平方米的流明,FC (foot-candle) 代表每平方呎的流明",
+  "GPLCS.blueLight": "藍光強度",
+  "GPLCS.enable_mode": "設定GPLCS 的工作模式, 其他模式的功能會失效",
+  "GPLCS.gesture": "偵測手勢",
+  "GPLCS.getGestureID": "輸出手勢的編號, 1 = 向上, 2 = 向右, 3 = 向下, 4 = 向左, 5 = 接近, 6 = 遠離.",
+  "GPLCS.greenLight": "綠光強度",
+  "GPLCS.onGesture": "當偵測到這個手勢，便執行以下程式",
+  "GPLCS.proximity": "輸出距離的遠近指數, 數值越小距離越遠。請留意，讀數並不是與物件的距離！",
+  "GPLCS.redLight": "紅光強度"
+
+}
